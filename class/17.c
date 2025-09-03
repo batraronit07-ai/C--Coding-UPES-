@@ -1,4 +1,4 @@
-// WAP a program to count down from 3 to 
+// WAP a program to count down from 3 to 1 and then print happy new yaer
 
 #include<stdio.h>
 
