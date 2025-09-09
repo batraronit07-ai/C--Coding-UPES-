@@ -7,17 +7,17 @@ int main()
 
     printf("Enter a number: ");
     scanf("%d", &n);
-
-    for (k = n; k >= 0; k--)
+    
+    for (i = 1; i <= n; i++)
     {
-        for (l = k; l >= 0; l--)
+        for (j = 1; j <= i; j++)
         {
             printf("*");
         }
 
         printf("\n");
     }
-    
+
     for (i = 1; i <= n; i++)
     {
         for (j = 1; j <= i; j++)

@@ -5,7 +5,7 @@ int main()
 
     int number, multiple;
 
-    printf("enter the number whose table id to be printed");
+    printf("enter the number whose table id to be printed: ");
     scanf("%d", &number);
 
     for (int i = 0; i <= 10; i++)
