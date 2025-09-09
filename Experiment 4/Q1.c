@@ -1,17 +1,13 @@
 #include <stdio.h>
-
-int main()
-{
-
+int main(){
     char another;
     int number;
     int positive_count = 0;
     int negative_count = 0;
     int zero_count = 0;
-
     do
     {
-        printf("Enter a number: \n");
+        printf("Enter a number: ");
         scanf("%d", &number);
 
         if (number > 0)
@@ -32,13 +28,11 @@ int main()
             negative_count++;
         }
 
-        printf("Want to print another number y/n: \n");
+        printf("Want to print another number y/n: ");
         fflush(stdin);
         scanf("%c", &another);
     }
-
     while (another == 'y');
-
     printf("||| ---------- RESULT ---------- |||\n");
     printf("Number of positive numbers entered are: %d\n", positive_count);
     printf("Number of negative numbers entered are: %d\n", negative_count);
