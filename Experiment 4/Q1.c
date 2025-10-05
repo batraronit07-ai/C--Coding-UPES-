@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 int x, y;
-
 int sum(int x, int y)
 {
 
