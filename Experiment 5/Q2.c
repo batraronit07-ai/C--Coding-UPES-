@@ -2,38 +2,56 @@
 
 int main()
 {
-    int n, i;
-    
-    int positive_count = 0, negative_count = 0, even_count = 0, odd_count = 0;
 
-    printf("Enter number of elements: ");
+    int n, i, even_count = 0, odd_count = 0, positive_count = 0, negative_count = 0, zero_count = 0;
+
+    printf("Enter the value of n:");
     scanf("%d", &n);
 
-    int integers[n];
+    int arr[n];
 
-    printf("Enter %d integers:\n", n);
+    printf("Enter the value of elements of the array: ");
+
     for (i = 0; i < n; i++)
     {
-        scanf("%d", &integers[i]);
+        scanf("%d", &arr[i]);
     }
 
     for (i = 0; i < n; i++)
     {
-        if (integers[i] >= 0)
+        if (arr[i] > 0)
+        {
             positive_count++;
-        else
-            negative_count++;
+        }
 
-        if (integers[i] % 2 == 0)
-            even_count++;
-        else
-            odd_count++;
+        if (arr[i] < 0)
+        {
+            negative_count++;
+        }
+
+        if (arr[i] == 0)
+        {
+            zero_count++;
+        }
     }
 
-    printf("Positive numbers: %d\n", positive_count);
-    printf("Negative numbers: %d\n", negative_count);
-    printf("Even numbers: %d\n", even_count);
-    printf("Odd numbers: %d\n", odd_count);
+    for (i = 0; i < n; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            even_count++;
+        }
 
+        if (arr[i] % 2 != 0)
+        {
+            odd_count++;
+        }
+    }
+
+    printf("Number of even numbers: %d\n", even_count);
+    printf("Number of odd numbers: %d\n", odd_count);
+    printf("Number of positive numbers: %d\n", positive_count);
+    printf("Number of negative numbers: %d\n", negative_count);
+    printf("Number of zeros: %d", zero_count);
     return 0;
 }

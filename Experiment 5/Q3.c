@@ -2,30 +2,34 @@
 
 int main()
 {
-    int n, i, number, count = 0;
 
-    printf("Enter the number of elements: ");
+    int i, n;
+
+    printf("Enter the value of n: ");
     scanf("%d", &n);
 
-    int integers[n];
-    printf("Enter %d integers:\n", n);
+    int arr[n];
+
+    printf("Enter the value of elements of the array: ");
+
     for (i = 0; i < n; i++)
     {
-        scanf("%d", &integers[i]);
+        scanf("%d", &arr[i]);
     }
 
-    printf("Enter the number to find its frequency: ");
+    int number, count = 0;
+
+    printf("Enter the number whose frequency is to be found: ");
     scanf("%d", &number);
 
     for (i = 0; i < n; i++)
     {
-        if (integers[i] == number)
+        if (number == arr[i])
         {
             count++;
         }
     }
 
-    printf("Frequency of %d is %d\n", number, count);
-
+    printf("frequency of %d in array is %d", number, count);
     return 0;
 }
