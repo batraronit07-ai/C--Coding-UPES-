@@ -1,18 +1,17 @@
-#include <stdio.h>
+#include<stdio.h>
 
-int main()
-{
+int gv = 10;
 
-    int number, multiple;
+int a() {
 
-    printf("enter the number whose table id to be printed");
-    scanf("%d", &number);
+    int lv = 20;
+    printf("inside a: ");
+    printf("local variable: %d\n", lv);
+    printf("global variable: %d\n", gv);
+}
 
-    for (int i = 0; i <= 10; i++)
-    {
-        multiple = number * i;
+int main() {
 
-        printf("%d * %d = %d\n", number, i, multiple);
-    }
+    printf("global variable: %d", gv, a());
     return 0;
 }

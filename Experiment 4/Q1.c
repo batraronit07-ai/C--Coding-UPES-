@@ -1,41 +1,40 @@
 #include <stdio.h>
-int main(){
-    char another;
-    int number;
-    int positive_count = 0;
-    int negative_count = 0;
-    int zero_count = 0;
-    do
-    {
-        printf("Enter a number: ");
-        scanf("%d", &number);
 
-        if (number > 0)
-        {
-            printf("this is a positive number\n");
-            positive_count++;
-        }
+int x, y;
 
-        else if (number == 0)
-        {
-            printf("this number is zero\n");
-            zero_count++;
-        }
+int sum(int x, int y)
+{
 
-        else if (number < 0)
-        {
-            printf("this is a negative number\n");
-            negative_count++;
-        }
+    int sum = x + y;
 
-        printf("Want to print another number y/n: ");
-        fflush(stdin);
-        scanf("%c", &another);
-    }
-    while (another == 'y');
-    printf("||| ---------- RESULT ---------- |||\n");
-    printf("Number of positive numbers entered are: %d\n", positive_count);
-    printf("Number of negative numbers entered are: %d\n", negative_count);
-    printf("Number of zeros entered are: %d\n", zero_count);
+    printf("Sum of x and y is %d\n", sum);
+}
+
+int product(int x, int y)
+{
+
+    int product = x * y;
+
+    printf("product of x and y is %d\n", product);
+}
+
+int difference(int x, int y)
+{
+
+    int difference = x - y;
+
+    printf("Difference of x and y is %d\n", difference);
+}
+
+int main()
+{
+
+    printf("Enter the value of x and y: ");
+    scanf("%d, %d", &x, &y);
+
+    difference(x, y);
+    product(x, y);
+    sum(x, y);
+
     return 0;
 }

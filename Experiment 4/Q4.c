@@ -1,20 +1,19 @@
 #include <stdio.h>
 
+int func()
+{
+
+    static int count = 0;
+    count++;
+    return count;
+}
+
 int main()
 {
 
-    int population, rate;
-    float new_population;
-
-    population = 100000;
-    rate = 10;
-
-    for (int i = 1; i <= 10; i = i + 1)
-    {
-        new_population = population + (population/10);
-        population = new_population;
-        printf("The population of %d year of this decade is %f\n", i, new_population);
-    }
+    printf("%d\n", func());
+    printf("%d\n", func());
+    printf("%d\n", func());
 
     return 0;
 }
