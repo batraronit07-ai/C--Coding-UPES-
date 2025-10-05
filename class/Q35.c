@@ -13,8 +13,7 @@ int main() {
                 printf("array[%d][%d][%d] ", i, j, k);
             }
             printf("\n");
-        }
-        printf("\n");
+        } 
     }
 
     return 0;
